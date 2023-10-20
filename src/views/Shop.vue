@@ -1,138 +1,165 @@
-<script setup></script>
+<script setup>
+import ProductCard from '../components/product/ProductCard.vue';
+</script>
 <template>
-    <div class="w-screen bg-gray-100">
-        <div class="h-screen w-64 pb-10">
-            <div class="flex h-full flex-grow flex-col overflow-y-auto rounded-br-lg rounded-tr-lg bg-white pt-5 shadow-md">
-                <div class="flex mt-10 items-center px-4">
-                    <img class="h-12 w-auto max-w-full align-middle" src="/images/R-Wx_NHvZBci3KLrgXhp1.png" alt="" />
-                    <div class="flex ml-3 flex-col">
-                        <h3 class="font-medium">Sarah Carter</h3>
-                        <p class="text-xs text-gray-500">Sr. Engineer</p>
+    <section class="border-b container flex-grow lg:flex lg:flex-row lg:py-10 max-w-screen mx-auto py-5">
+        <section class="flex-shrink-0 hidden lg:block px-4 w-[300px]">
+            <div class="border-b flex pb-5">
+                <div class="w-full">
+                    <p class="font-medium mb-3">CATEGORIES</p>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Bedroom</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(12)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Sofa</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(15)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Office</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(14)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Outdoor</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(124)</p>
+                        </div>
                     </div>
                 </div>
-
-                <span class="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">Analytics</span>
-
-                <div class="flex mt-3 flex-1 flex-col">
-                    <div class="">
-                        <nav class="flex-1">
-                            <a href="#" title=""
-                                class="flex cursor-pointer items-center border-l-4 border-l-rose-600 py-2 px-4 text-sm font-medium text-rose-600 outline-none transition-all duration-100 ease-in-out focus:border-l-4">
-                                <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                                        class=""></path>
-                                </svg>
-                                Dashboard
-                            </a>
-
-
-
-                            <a href="#"
-                                class="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                                <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
-                                </svg>
-
-                                Messages
-                                <span class="ml-auto rounded-full bg-rose-600 px-2 text-xs text-white">6</span>
-                            </a>
-
-                            <div class="relative transition">
-                                <input class="peer hidden" type="checkbox" id="menu-1" checked />
-                                <button
-                                    class="flex peer relative w-full items-center border-l-rose-600 py-3 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:text-rose-600 focus:border-l-4">
-                                    <span class="flex mr-5 w-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                        </svg></span>
-                                    Analytics
-                                    <label for="menu-1" class="absolute inset-0 h-full w-full cursor-pointer"></label>
-                                </button>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="absolute right-0 top-4 ml-auto mr-5 h-4 text-gray-600 transition peer-checked:rotate-180 peer-hover:text-rose-600"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
-                                <ul
-                                    class="duration-400 flex m-2 max-h-0 flex-col overflow-hidden rounded-xl bg-gray-100 font-medium transition-all duration-300 peer-checked:max-h-96">
-                                    <li
-                                        class="flex m-2 cursor-pointer border-l-rose-600 py-3 pl-5 text-sm text-gray-600 transition-all duration-100 ease-in-out hover:border-l-4 hover:text-rose-600">
-                                        <span class="mr-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                            </svg></span>
-                                        Revenue
-                                    </li>
-                                    <li
-                                        class="flex m-2 cursor-pointer border-l-rose-600 py-3 pl-5 text-sm text-gray-600 transition-all duration-100 ease-in-out hover:border-l-4 hover:text-rose-600">
-                                        <span class="mr-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                            </svg></span>
-                                        Refunds
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-
-                        <span class="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">Product Mangement</span>
-
-                        <nav class="flex-1">
-                            <a href="#"
-                                class="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                                <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
-                                        class=""></path>
-                                </svg>
-                                Products
-                            </a>
-
-                            <a href="#"
-                                class="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                                <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                </svg>
-                                Orders
-                            </a>
-                            <a href="#"
-                                class="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                                <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-
-                            Suppliers
-                        </a>
-                    </nav>
-
-                    <span class="ml-3 mt-10 mb-2 block text-xs font-semibold text-gray-500">Content Management</span>
-
-                    <nav class="flex-1">
-                        <a href="#"
-                            class="flex cursor-pointer items-center border-l-rose-600 py-2 px-4 text-sm font-medium text-gray-600 outline-none transition-all duration-100 ease-in-out hover:border-l-4 hover:border-l-rose-600 hover:text-rose-600 focus:border-l-4">
-                            <svg class="mr-4 h-5 w-5 align-middle" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                            </svg>
-                            Blogs
-                        </a>
-                    </nav>
+            </div>
+            <div class="border-b flex py-5">
+                <div class="w-full">
+                    <p class="font-medium mb-3">BRANDS</p>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">APEX</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(12)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Call of SOFA</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(15)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Puff B&amp;G</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(14)</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center justify-center"> <input type="checkbox">
+                            <p class="ml-4">Fornighte</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">(124)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="border-b flex py-5">
+                <div class="w-full">
+                    <p class="font-medium mb-3">PRICE</p>
+                    <div class="flex w-full">
+                        <div class="flex justify-between"> <input x-mask="99999" class="border h-8 pl-2 w-[90px]"
+                                placeholder="50"> <span class="px-3">-</span> <input x-mask="999999"
+                                class="border h-8 pl-2 w-[90px]" placeholder="99999"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b flex py-5">
+                <div class="w-full">
+                    <p class="font-medium mb-3">SIZE</p>
+                    <div class="flex gap-2">
+                        <div
+                            class="active:ring-2 active:ring-gray-500 border cursor-pointer duration-100 flex focus:ring-2 focus:ring-gray-500 h-8 hover:bg-neutral-100 items-center justify-center w-8">
+                            XS </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 border cursor-pointer duration-100 flex focus:ring-2 focus:ring-gray-500 h-8 hover:bg-neutral-100 items-center justify-center w-8">
+                            S </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 border cursor-pointer duration-100 flex focus:ring-2 focus:ring-gray-500 h-8 hover:bg-neutral-100 items-center justify-center w-8">
+                            M </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 border cursor-pointer duration-100 flex focus:ring-2 focus:ring-gray-500 h-8 hover:bg-neutral-100 items-center justify-center w-8">
+                            L </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 border cursor-pointer duration-100 flex focus:ring-2 focus:ring-gray-500 h-8 hover:bg-neutral-100 items-center justify-center w-8">
+                            XL </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex py-5">
+                <div class="w-full">
+                    <p class="font-medium mb-3">COLOR</p>
+                    <div class="flex gap-2">
+                        <div
+                            class="active:ring-2 active:ring-gray-500 bg-gray-600 border border-white cursor-pointer focus:ring-2 focus:ring-gray-500 h-8 w-8">
+                        </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 bg-violet-900 border border-white cursor-pointer focus:ring-2 focus:ring-gray-500 h-8 w-8">
+                        </div>
+                        <div
+                            class="active:ring-2 active:ring-gray-500 bg-red-900 border border-white cursor-pointer focus:ring-2 focus:ring-gray-500 h-8 w-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div></template>
+        <div>
+            <div class="flex items-center justify-between mb-5 px-5">
+                <div class="flex gap-3"> <button class="border flex items-center justify-center px-6 py-2"> Sort by <svg
+                            fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 mx-2 w-4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                        </svg> </button> <button class="border flex items-center justify-center md:hidden px-6 py-2">
+                        Filters <svg fill="none" stroke="currentColor" stroke-width="1.5" class="h-4 mx-2 w-4"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                        </svg> </button> </div>
+                <div class="gap-3 hidden lg:flex"> <button class="bg-amber-400 border px-2 py-2"> <svg fill="none"
+                            stroke="currentColor" stroke-width="1.5" class="h-5 w-5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6zm0 9.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25zM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6zm0 9.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25z">
+                            </path>
+                        </svg> </button> <button class="border px-2 py-2"> <svg fill="none" stroke="currentColor"
+                            stroke-width="1.5" class="h-5 w-5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0z">
+                            </path>
+                        </svg> </button> </div>
+            </div>
+            <div class="grid grid-cols-1 mt-6 gap-4 lg:grid-cols-3 lg:gap-6">
+
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+                <ProductCard></ProductCard>
+            </div>
+        </div>
+
+    </section>
+</template>

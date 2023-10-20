@@ -1,16 +1,21 @@
 <script setup>
-import HomeHeaderVue from '../components/HomeHeader.vue';
-import TopNewArrival from '../components/product/TopNewArrival.vue';
+import HomeHeroSecion from '../components/HomeHeroSecion.vue';
+import ProductList from '../components/product/ProductList.vue';
 import CallToAction from '../components/CallToAction.vue';
-import FeaturedProducts from '../components/product/FeaturedProducts.vue';
 </script>
 
 <template>
   <div class="overflow-x-hidden bg-gray-50">
-    <HomeHeaderVue></HomeHeaderVue>
-    <TopNewArrival></TopNewArrival>
+    <HomeHeroSecion></HomeHeroSecion>
+    <ProductList>
+      Top New Arrivals
+    </ProductList>
+
     <CallToAction></CallToAction>
-    <FeaturedProducts></FeaturedProducts>    
+    <ProductList>
+      Top Featured Products
+    </ProductList>
+
   </div>
   
 </template>

@@ -5,7 +5,9 @@ import ProductCard from './ProductCard.vue';
   <section class="bg-white py-12 text-gray-700 sm:py-4 lg:py-4">
     <div class="mx-auto max-w-screen-xl px-4 sm:px-4 lg:px-8">
       <div class="mx-auto max-w-md text-center">
-        <h2 class="text-2xl font-bold sm:text-3xl">Top Featured Products</h2>
+        <h2 class="text-2xl font-bold sm:text-3xl">
+            <slot></slot>
+        </h2>
         <!-- <p class="mt-4 text-base text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus faucibus
           massa dignissim tempus.</p> -->
       </div>
@@ -14,11 +16,7 @@ import ProductCard from './ProductCard.vue';
         <ProductCard></ProductCard>
         <ProductCard></ProductCard>
         <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>      
       </div>
     </div>
   </section>

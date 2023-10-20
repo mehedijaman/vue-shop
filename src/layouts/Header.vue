@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router';
                 class="peer-checked:mt-8 peer-checked:max-h-32 flex max-h-0 w-full flex-col items-center justify-between overflow-hidden transition-all sm:ml-24 sm:max-h-full sm:flex-row sm:items-start text-white">
                 <h2 class="sr-only" id="header-navigation">Header navigation</h2>
                 <ul class="flex flex-col items-center sm:flex-row">
-                    <li class="font-bold sm:mr-12"><router-link to="/" >Home</router-link></li>
+                    <li class="font-bold sm:mr-12"><router-link to="/">Home</router-link></li>
                     <li class="text-white sm:mr-12"><router-link to="/shop">Shop</router-link></li>
                     <li class="text-white sm:mr-12"><router-link to="/about">About</router-link></li>
                     <li class="text-white sm:mr-12"><router-link to="/blog">Blog</router-link></li>
@@ -31,25 +31,36 @@ import { RouterLink } from 'vue-router';
                 </ul>
                 <ul class="mt-4 flex sm:mt-0">
                     <li
-                        class="ml-6 flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow">
-
+                        class="ml-6 flex h-8 w-8 cursor-pointer items-center justify-center  text-gray-600 hover:text-black hover:shadow">
                         <router-link to="/cart">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                        </svg>
+                            <div class="flex min-h-screen items-center justify-center">
+                                <div class="relative scale-75">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="h-8 w-8 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                    </svg>
+                                    <span
+                                        class="absolute -top-2 left-6 rounded-full bg-white p-0.5 px-2 text-black">40</span>
+                                </div>
+                            </div>
                         </router-link>
-
                     </li>
                     <li
-                        class="ml-6 flex h-8 w-8 cursor-pointer items-center justify-center rounded-xl border text-gray-600 hover:text-black hover:shadow">
+                        class="ml-6 flex h-8 w-8 cursor-pointer items-center justify-center  text-gray-600 hover:text-black hover:shadow">
                         <router-link to="/wishlist">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                        </svg>
+                            <div class="flex min-h-screen items-center justify-center">
+                                <div class="relative scale-75">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                    </svg>
+
+                                    <span
+                                        class="absolute -top-2 left-6 rounded-full bg-white p-0.5 px-2 text-black">40</span>
+                                </div>
+                            </div>
                         </router-link>
                     </li>
                     <li

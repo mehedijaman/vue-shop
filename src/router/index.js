@@ -17,6 +17,26 @@ const router = createRouter({
           component: () => import('../views/Shop.vue')
         },
         {
+          path:'product/details/:id',
+          name: 'product-details',
+          component: () => import('../components/product/ProductDetails.vue')
+        },
+        {
+          path:'cart',
+          name: 'cart',
+          component: () => import('../views/Cart.vue')
+        },
+        {
+          path:'wishlist',
+          name: 'wishlist',
+          component: () => import('../views/WishList.vue')
+        },
+        {
+          path:'checkout',
+          name: 'checkout',
+          component: () => import('../views/Checkout.vue')
+        },
+        {
           path: 'about',
           name: 'about',
           component: () => import('../views/About.vue')
