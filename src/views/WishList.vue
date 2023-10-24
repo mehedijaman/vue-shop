@@ -1,8 +1,11 @@
 <script setup>
-import ProductList from '../components/product/ProductList.vue';
+import ProductCard from '../components/product/ProductCard.vue';
+import wishList from '../stores/wishList';
+
+const wishListStore = wishList();
 </script>
 <template>
-    <ProductList>
-        Wishlist
-    </ProductList>
+    <div class="grid grid-cols-1 mt-6 gap-4 lg:grid-cols-4 lg:gap-6">
+        <ProductCard v-for="product in wishListStore.items" key="product.id" :product="product"></ProductCard>
+    </div>
 </template>

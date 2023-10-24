@@ -1,5 +1,18 @@
 <script setup>
-import ProductCard from '../components/product/ProductCard.vue';
+    import {ref, reactive, onMounted} from 'vue';
+    import ProductCard from '../components/product/ProductCard.vue';
+
+    const productURL = 'https://dummyjson.com/products';
+
+    const products = ref([]);
+
+    onMounted(async () => {
+        const res = await fetch(productURL);
+        const data = await res.json();
+
+        products.value = data.products;
+    });
+
 </script>
 <template>
     <section class="border-b container flex-grow lg:flex lg:flex-row lg:py-10 max-w-screen mx-auto py-5">
@@ -152,12 +165,7 @@ import ProductCard from '../components/product/ProductCard.vue';
             </div>
             <div class="grid grid-cols-1 mt-6 gap-4 lg:grid-cols-3 lg:gap-6">
 
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
-                <ProductCard></ProductCard>
+                <ProductCard v-for="product in products" key="product.id" :product="product"></ProductCard>
             </div>
         </div>
 
