@@ -32,8 +32,6 @@ const useAuthStore = defineStore('auth', () => {
         .then(async (res) => {
             isAuthenticated.value = true;
             authenticatedUser.value = res;
-            await getProfile();
-
             localStorage.setItem('isAuthenticated', isAuthenticated.value);
             localStorage.setItem('authenticatedUser', JSON.stringify(authenticatedUser.value));
             

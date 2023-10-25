@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import useAuthStore from '../stores/authStore';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,6 +32,11 @@ const router = createRouter({
           path: 'reset-password',
           name: 'reset-password',
           component: () => import('../views/auth/PasswordReset.vue')
+        },
+        {
+          path: 'profile',
+          name: 'profile',
+          component: () => import('../views/Profile.vue')
         },
         
         {
@@ -89,5 +95,17 @@ const router = createRouter({
     
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+
+  authStore.isAuthenticated = JSON.parse(localStorage.getItem('isAuthenticated'));
+
+  if(to.meta.requiresAuth && authStore.isAuthenticated != true){
+    next('/login');
+  }else{
+    next();
+  }
+});
 
 export default router

@@ -1,6 +1,6 @@
 <script setup>
-import cart from '../stores/cart';
-const cartStore = cart();
+import useCartStore from '../stores/cartStore';
+const cartStore = useCartStore()
 </script>
 <template>
 
