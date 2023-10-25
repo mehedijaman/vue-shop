@@ -1,5 +1,10 @@
 <script setup>
-import ProductCard from './ProductCard.vue';
+    import {ref, reactive, onMounted} from 'vue';
+    import { RouterLink } from 'vue-router';
+    import ProductCard from './ProductCard.vue';
+
+    import useProductStore from '../../stores/productStore';
+    const productStore = useProductStore();
 </script>
 <template>
   <section class="bg-white py-12 text-gray-700 sm:py-4 lg:py-4">
@@ -13,10 +18,7 @@ import ProductCard from './ProductCard.vue';
       </div>
 
       <div class="grid grid-cols-1 mt-6 gap-4 lg:grid-cols-4 lg:gap-6">
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>      
+        <ProductCard v-for="product in productStore.products" key="product.id" :product="product"></ProductCard>     
       </div>
     </div>
   </section>

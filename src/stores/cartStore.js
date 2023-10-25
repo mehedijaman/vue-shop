@@ -1,15 +1,18 @@
 import { ref, computed, reactive } from 'vue'
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
+import { useToast } from 'vue-toastification'
+const toast = useToast();
 
-const cart = defineStore('cart', () => {
-    const URL = 'https://dummyjson.com/products';
+const baseURL = 'https://dummyjson.com';
+
+const useCartStore = defineStore('cart', () => {
 
     const items = reactive([]);
     const totalItems = computed(() => items.length);
 
     async function add(product){
         items.push(product);
-        console.log('Product added to cart');
+        toast.success("Product added to cart!");
     }
 
     async function remove(product){
@@ -20,4 +23,4 @@ const cart = defineStore('cart', () => {
     return { items, totalItems, add }
 })
 
-export default cart;
+export default useCartStore;

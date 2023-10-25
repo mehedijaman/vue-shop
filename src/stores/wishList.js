@@ -1,5 +1,7 @@
 import { ref, computed, reactive } from 'vue'
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
+import { useToast } from 'vue-toastification'
+const toast = useToast();
 
 const wishList = defineStore('wishList', () => {
     const URL = 'https://dummyjson.com/products';
@@ -9,7 +11,7 @@ const wishList = defineStore('wishList', () => {
 
     async function add(product){
         items.push(product);
-        console.log('Product added to WishList');
+        toast.success('Product added to Wishlist !');
     }
 
     async function remove(product){

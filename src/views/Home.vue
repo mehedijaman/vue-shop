@@ -1,20 +1,20 @@
 <script setup>
 import HomeHeroSecion from '../components/HomeHeroSecion.vue';
-import ProductList from '../components/product/ProductList.vue';
+// import ProductList from '../components/product/ProductList.vue';
 import CallToAction from '../components/CallToAction.vue';
 </script>
 
 <template>
   <div class="overflow-x-hidden bg-gray-50">
     <HomeHeroSecion></HomeHeroSecion>
-    <ProductList>
+    <!-- <ProductList>
       Top New Arrivals
-    </ProductList>
+    </ProductList> -->
 
     <CallToAction></CallToAction>
-    <ProductList>
+    <!-- <ProductList>
       Top Featured Products
-    </ProductList>
+    </ProductList> -->
 
   </div>
   

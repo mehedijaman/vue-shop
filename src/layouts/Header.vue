@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import cart from '../stores/cart';
-import wishList from '../stores/wishList';
+import useCartStore from '../stores/cartStore';
+const cartStore = useCartStore();
 
+import wishList from '../stores/wishList';
 const wishListStore = wishList();
-const cartStore = cart();
+
 
 </script>
 
