@@ -1,5 +1,6 @@
 <script setup>
   import Master from './layouts/Master.vue';
+  import { RouterView } from 'vue-router';
 </script>
 
 <template>

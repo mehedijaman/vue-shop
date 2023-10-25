@@ -16,7 +16,7 @@
 <template>
     <section class="border-b container flex-grow lg:flex lg:flex-row lg:py-10 max-w-screen mx-auto py-5">
         <section class="flex-shrink-0 hidden lg:block px-4 w-[300px]">
-            <div class="border-b flex pb-5">
+            <!-- <div class="border-b flex pb-5">
                 <div class="w-full">
                     <p class="font-medium mb-3">CATEGORIES</p>
                     <div v-for="(category,index) in productStore.categories" :key="index" class="flex justify-between w-full">
@@ -24,12 +24,12 @@
                             <input type="checkbox">
                             <router-link :to="`/shop/category/${category}`" class="ml-4">{{ category }}</router-link>
                         </div>
-                        <!-- <div>
+                        <div>
                             <p class="text-gray-500">(12)</p>
-                        </div> -->
+                        </div>
                     </div>                 
                 </div>
-            </div>
+            </div> -->
             <!-- <div class="border-b flex py-5">
                 <div class="w-full">
                     <p class="font-medium mb-3">BRANDS</p>

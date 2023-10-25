@@ -2,10 +2,37 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  routes: [   
+
     {
       path: '/',
       children:[
+        {
+          path: 'login',
+          name: 'login',
+          component: () => import('../views/auth/Login.vue')
+        },
+        {
+          path: 'register',
+          name: 'register',
+          component: () => import('../views/auth/Register.vue')
+        },
+        {
+          path: 'verify',
+          name: 'verify',
+          component: () => import('../views/auth/Verification.vue')
+        },
+        {
+          path: 'forget-password',
+          name: 'forget-password',
+          component: () => import('../views/auth/PasswordForget.vue')
+        },
+        {
+          path: 'reset-password',
+          name: 'reset-password',
+          component: () => import('../views/auth/PasswordReset.vue')
+        },
+        
         {
           path:'',
           name: 'home',
@@ -15,13 +42,8 @@ const router = createRouter({
         {
           path:'shop',
           name: 'shop',
-          component: () => import('../views/Shop.vue')
-        },
-        {
-          path:'shop/category/:category',
-          name: 'category-shop',
-          component: () => import('../views/Shop.vue')
-        },
+          component: () => import('../views/Shop.vue')          
+        },       
         {
           path:'product/list',
           name: 'product-list',
