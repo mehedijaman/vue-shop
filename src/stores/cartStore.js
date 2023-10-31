@@ -8,6 +8,8 @@ const baseURL = 'https://dummyjson.com';
 const useCartStore = defineStore('cart', () => {
 
     const items = reactive({});
+    getCartFromLocalStorage();
+
     const totalItems = computed(()=>{
         let total = 0
         for(let id in items){
@@ -37,6 +39,31 @@ const useCartStore = defineStore('cart', () => {
         toast.success("Product added to cart!");
     }
 
+    async function remove(product){
+        if(items[product.id]){
+            delete items[product.id];
+            saveCartToLocalStorage();
+            toast.success("Product removed from cart!");
+        }
+    }
+
+    async function increase(product){
+        if(items[product.id]){
+            items[product.id].quantity++;
+            saveCartToLocalStorage();
+        }
+    }
+
+    async function decrease(product){
+        if(items[product.id]){
+            items[product.id].quantity--;
+            if(items[product.id].quantity == 0){
+                remove(product);
+            }
+            saveCartToLocalStorage();
+        }
+    }
+
     async function empty(){
         items = {};
         saveCartToLocalStorage();
@@ -47,10 +74,15 @@ const useCartStore = defineStore('cart', () => {
         localStorage.setItem('cart', JSON.stringify(items))
     }
     function getCartFromLocalStorage(){
-        items = JSON.parse(localStorage.getItem('cart')) || {}
+        const cartItems = JSON.parse(localStorage.getItem('cart'));
+        if (cartItems) {
+            Object.assign(items, cartItems);
+        }
+
+        // items = JSON.parse(localStorage.getItem('cart')) || {}
     }
 
-    return { items, totalItems, totalPrice, add, empty, getCartFromLocalStorage }
+    return { items, totalItems, totalPrice, add, remove, increase, decrease, empty }
 })
 
 export default useCartStore;
