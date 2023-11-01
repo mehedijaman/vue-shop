@@ -82,6 +82,12 @@ const useCartStore = defineStore('cart', () => {
         // items = JSON.parse(localStorage.getItem('cart')) || {}
     }
 
+    async function applyCoupon(couponCode){
+        // get coupon discount % from API
+        const discoountParcent = 10;
+        const discountedPrice = totalPrice - (totalPrice * discoountParcent/100);
+    }
+
     return { items, totalItems, totalPrice, add, remove, increase, decrease, empty }
 })
 
