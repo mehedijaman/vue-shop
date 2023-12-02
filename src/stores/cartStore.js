@@ -4,6 +4,7 @@ import { useToast } from 'vue-toastification'
 const toast = useToast();
 
 const baseURL = 'https://dummyjson.com';
+toast.success("Product added to cart!");
 
 const useCartStore = defineStore('cart', () => {
 
